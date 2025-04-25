@@ -1,49 +1,50 @@
-import logo from "../cryptologo.png"
+import logo from "../cryptologo.png";
+import { Link } from "react-router-dom";
 function Header()
 {
  return(
     <>
      <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark ">
   <div class="container-fluid">
-    <a class="navbar-brand" ><img src={logo} alt="logo" width="80px"/> CryptoPulse </a>
+    <Link class="navbar-brand" to="/"><img src={logo} alt="logo" width="80px"/> CryptoPulse </Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active"  >Home</a>
+          <Link class="nav-link active"  to="/" >Home</Link>
         </li>
   
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" >
+          <Link class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" >
           Market Trends
-          </a>
+          </Link>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item">Bull Market</a></li>
-            <li><a class="dropdown-item" >Bear Market</a></li>
-            <li><a class="dropdown-item" >Sideways Market</a></li>
+            <li><Link class="dropdown-item" to="/">Bull Market</Link></li>
+            <li><Link class="dropdown-item" to="/" >Bear Market</Link></li>
+            <li><Link class="dropdown-item" to="/" >Sideways Market</Link></li>
             
             
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" >
+          <Link class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" >
           Market Types
-          </a>
+          </Link>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item">Spot Market</a></li>
-            <li><a class="dropdown-item" >Futures Market</a></li>
-            <li><a class="dropdown-item" >Derivatives Market</a></li>
+            <li><Link class="dropdown-item" to="/">Spot Market</Link></li>
+            <li><Link class="dropdown-item" to="/" >Futures Market</Link></li>
+            <li><Link class="dropdown-item" to="/" >Derivatives Market</Link></li>
             
             
           </ul>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" role="button" >
+          <Link class="nav-link" role="button" to="/" >
           About us
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
